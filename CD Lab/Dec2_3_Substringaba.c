@@ -10,7 +10,7 @@ int main() {
         i++;
     }
 
-    for (int j = 0; j < i; j++) {
+    for (int j = 0; j < i-2; j++) {
         if (input[j] == 'a' && input[j+1] == 'b' && input[j+2] == 'a') {
             printf("The substring 'aba' is present in the input.\n");
             return 0;

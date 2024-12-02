@@ -10,7 +10,7 @@ int main() {
         i++;
     }
 
-    for (int j = 0; j < i; j++) {
+    for (int j = 0; j < i-2; j++) {
         if (input[j] == '1' && input[j+1] == '0' && input[j+2] == '1') {
             printf("The substring '101' is present in the input.\n");
             return 0;
