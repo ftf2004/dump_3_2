@@ -9,7 +9,6 @@ int main() {
     while (scanf("%c", &input[i]) && input[i] != '\n' && i < 99) {
         i++;
     }
-    input[i] = '\0';  
 
     for (int j = 0; j < i; j++) {
         if (input[j] == 'a' && input[j+1] == 'b' && input[j+2] == 'a') {
