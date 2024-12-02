@@ -1,32 +1,24 @@
-// Checking if amstrong or not
 #include <stdio.h>
 #include <math.h>
-
-int main() {
-    int num, sum = 0, temp, remainder, n = 0;
-
-    printf("Enter a number: ");
-    scanf("%d", &num);
-
-    temp = num;
-
-    while (temp != 0) {
-        temp /= 10;
-        ++n;
-    }
-
-    temp = num;
-
-    while (temp != 0) {
-        remainder = temp % 10;
-        sum += pow(remainder, n);
-        temp /= 10;
-    }
-
-    if (sum == num)
-        printf("%d is an Armstrong number.\n", num);
-    else
-        printf("%d is not an Armstrong number.\n", num);
-
-    return 0;
+int main(){
+	int n,r,sum=0,count=0,x,y;
+	printf("Ënter value: ");
+	scanf("%d",&n);
+	x=y=n;
+	while(x!=0){
+		x/=10;
+		count++;
+	}
+	while(y!=0){
+		r=y%10;
+		sum+=pow(r,count);
+		y/=10;
+	}
+	if(sum==n){
+		printf("Armstrong.");
+	}
+	else{
+		printf("Not Armstrong.");
+	}
+	return 0;
 }
