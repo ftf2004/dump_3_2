@@ -9,7 +9,7 @@
       "stopAtEntry": false,
       "externalConsole": false,
       "cwd": "./CD_Lab",
-      "program": "build/Debug/outDebug",
+      "program": "/workspaces/dump_3_2/CD_Lab/",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
