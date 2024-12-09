@@ -4,7 +4,7 @@ int main(){
 	printf("Ënter the value of n: ");
 	scanf("%d",&n);
 	while (i<n){
-		if (n/i==0){
+		if (n%i==0){
 			count++;
 		}
 		i++;
