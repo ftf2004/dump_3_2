@@ -1,0 +1,281 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Top Frame Styles */
+#top-frame {
+    background-color: #2d6a4f; /* Main Green color */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#university-logo {
+    width: 50px;
+    height: 50px;
+}
+
+#top-frame h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+#nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+#nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #1b4e38; /* Dark Green */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#nav-links a:hover {
+    background-color: #3e7a5b; /* Lighter Green */
+}
+
+/* Main Content Container */
+.main-container {
+    display: flex;
+    min-height: 80vh;
+}
+
+/* Left Panel Styles */
+#left-frame {
+    width: 25%;
+    background-color: #1b4e38; /* Darker Green */
+    padding: 20px;
+    border-right: 2px solid #2d6a4f;
+    color: #d1e5d2;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#left-frame h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#left-frame ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#left-frame li {
+    margin: 10px 0;
+}
+
+#left-frame a {
+    text-decoration: none;
+    color: #d1e5d2;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+#left-frame a:hover {
+    background-color: #3e7a5b; /* Slightly lighter green for hover */
+}
+
+/* Right Panel Styles */
+#right-frame {
+    width: 75%;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+#right-frame h2 {
+    font-size: 24px;
+    color: #2d6a4f;
+    margin-bottom: 20px;
+}
+
+#right-frame p {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+/* Button Styles */
+button {
+    background-color: #2d6a4f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #3e7a5b;
+}
+
+/* Catalogue List Styles */
+.catalogue-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.category {
+    background-color: #2d6a4f;
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.category a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    background-color: #1b4e38;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.category a:hover {
+    background-color: #3e7a5b;
+}
+
+/* Book List Styles */
+.book-list {
+    margin-top: 20px;
+}
+
+.book-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.book-list li {
+    background-color: #f0f0f0;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.book-list a {
+    text-decoration: none;
+    color: #2d6a4f;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.book-list a:hover {
+    color: #1b4e38;
+}
+
+/* Cart Page Styles */
+.cart {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart h2 {
+    font-size: 24px;
+    color: #2d6a4f;
+    margin-bottom: 20px;
+}
+
+.cart p {
+    font-size: 16px;
+}
+
+.cart button {
+    background-color: #2d6a4f;
+    color: white;
+    padding: 15px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.cart button:hover {
+    background-color: #3e7a5b;
+}
+
+/* Form Styles for Register & Login Pages */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+button {
+    background-color: #2d6a4f;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3e7a5b;
+}
+
+p {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+p a {
+    color: #2d6a4f;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}

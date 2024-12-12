@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Online Book Store - Gitam University</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Top Frame with Gitam University Logo and Name -->
+    <div id="top-frame">
+        <img src="logo.png" alt="Gitam University Logo" id="university-logo">
+        <h1>Gitam University</h1>
+        <div id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+            <a href="catalogue.html">Catalogue</a>
+            <a href="cart.html">Cart</a>
+        </div>
+    </div>
+
+    <!-- Login Form -->
+    <div class="main-container">
+        <div id="left-frame">
+            <h2>Book Categories</h2>
+            <ul>
+                <li><a href="btech_cse.html" target="right-frame">BTech - CSE</a></li>
+                <li><a href="btech_ece.html" target="right-frame">BTech - ECE</a></li>
+                <li><a href="mtech.html" target="right-frame">MTech</a></li>
+                <li><a href="mba.html" target="right-frame">MBA</a></li>
+                <li><a href="medical.html" target="right-frame">Medical</a></li>
+                <li><a href="literature.html" target="right-frame">Literature</a></li>
+            </ul>
+        </div>
+
+        <div id="right-frame">
+            <h2>Login to Your Account</h2>
+            <form action="login_process.html" method="POST">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="register.html">Register Here</a></p>
+        </div>
+    </div>
+
+</body>
+</html>
