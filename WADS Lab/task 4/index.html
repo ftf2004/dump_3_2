@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Display Name and Roll Number</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .box {
+            width: 300px;
+            padding: 20px;
+            margin: 20px auto;
+            border: 2px solid #642035;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            display: none;
+        }
+
+        .box p {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #254979;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #83325e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button onclick="showDetails()">Click to Display Name and Roll Number</button>
+        <div class="box" id="detailsBox">
+            <p><strong>Name:</strong> Sai Ganesh Eswaraprasad</p>
+            <p><strong>Roll Number:</strong> HU22CSEN0100287</p>
+        </div>
+    </div>
+
+    <script>
+        function showDetails() {
+            var box = document.getElementById('detailsBox');
+            box.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
