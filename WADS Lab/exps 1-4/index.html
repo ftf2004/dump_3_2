@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Online Service</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Welcome to Online Services</h2>
+    <h2>Our Services</h2>
+    <p>We provide excellent online solutions for your needs.</p>
+
+
+    <button id="showFormButton" onclick="showForm()">Register</button>
+
+    <form id="contactForm" onsubmit="return validateForm()">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" placeholder="1234567890"><br><br>
+
+        <label for="gender">Gender:</label><br>
+        <select id="gender" name="gender">
+            <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="error-message"></div>
+    <div id="success-message"></div>
+    <div class="time-container">
+        <h1>Current Time</h1>
+        <p id="time"></p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+<footer>
+    <p>&copy; 2025 Online Services. All rights reserved.</p>
+</footer>
+
+</html>

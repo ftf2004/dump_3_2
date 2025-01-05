@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+#showFormButton {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#showFormButton:hover {
+    background-color: #0056b3;
+}
+
+#contactForm {
+    display: none;
+    max-width: 300px;
+    margin: auto;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+}
+
+input[type="submit"] {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#error-message {
+    color: red;
+    margin-top: 20px;
+}
+
+#success-message {
+    color: green;
+    margin-top: 20px;
+}
