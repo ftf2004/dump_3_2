@@ -1,42 +1,46 @@
 #include <stdio.h>
 #include <string.h>
-#include <stdlib.h>
+
+void removeLeftFactoring(char prod[]) {
+    char alpha[10], beta1[10], beta2[10];
+    int i = 3, j = 3, k = 0;
+
+    // Finding the common prefix (alpha)
+    while (prod[j] != '/' && prod[j] != '\0') j++;
+    j++; // Move past '/'
+    while (prod[i] == prod[j]) {
+        alpha[k++] = prod[i++];
+        j++;
+    }
+    alpha[k] = '\0';
+
+    // Extracting the rest after the common prefix
+    k = 0;
+    while (prod[i] != '/' && prod[i] != '\0') {
+        beta1[k++] = prod[i++];
+    }
+    beta1[k] = '\0';
+
+    k = 0;
+    while (prod[j] != '\0') {
+        beta2[k++] = prod[j++];
+    }
+    beta2[k] = '\0';
+
+    // Printing the new productions
+    printf("\n%c->%s%c'\n", prod[0], alpha, prod[0]);
+    printf("%c'->%s/%s\n", prod[0], beta1, beta2);
+}
 
 int main() {
-    char prod[20], alpha[20], beta[20];
-    int i, j;
-    
-    // Get user input safely
-    printf("Enter the production: ");
-    fgets(prod, sizeof(prod), stdin);
-    prod[strcspn(prod, "\n")] = 0;  // Remove the trailing newline character from fgets input
-    
-    // Check if the production has left recursion
-    if (prod[0] == prod[3]) {
-        printf("\nEntered production is left recursive\n");
+    char prod[20];
+    printf("Enter the production (e.g., A->abc/abd): ");
+    scanf("%s", prod);
 
-        // Extract alpha and beta parts from the production
-        i = 4; 
-        j = 0;
-        while (prod[i] != '/' && prod[i] != '\0') { // Handle '->' part
-            alpha[j++] = prod[i++];
-        }
-        alpha[j] = '\0';
-
-        i++; // Skip over '/'
-        j = 0;
-        while (prod[i] != '\0') { // Handle right-hand side of the production
-            beta[j++] = prod[i++];
-        }
-        beta[j] = '\0';
-
-        // Output the modified production
-        printf("The production after removing left recursion is:\n");
-        printf("%c->%s%c'\n", prod[0], beta, prod[0]);
-        printf("%c'->%s%c'/$", prod[0], alpha, prod[0]);
+    if (prod[1] == '-' && prod[2] == '>') {
+        removeLeftFactoring(prod);
     } else {
-        printf("\nEntered production is not left recursive\n");
+        printf("Invalid production format.\n");
     }
-    
     return 0;
 }
