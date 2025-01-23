@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="cats.css"?>
+<cats>
+  <cat>
+    <name>Whiskers</name>
+    <breed>Persian</breed>
+    <color>White</color>
+    <age>3</age>
+    <description>Whiskers is a fluffy Persian cat with soft white fur and large blue eyes. She enjoys lounging around the house and being pampered.</description>
+    <favoriteFood>Salmon</favoriteFood>
+    <likes>
+      <item>Chasing laser pointers</item>
+      <item>Taking naps in sunbeams</item>
+    </likes>
+  </cat>
+  
+  <cat>
+    <name>Shadow</name>
+    <breed>Maine Coon</breed>
+    <color>Grey</color>
+    <age>5</age>
+    <description>Shadow is a large Maine Coon with sleek grey fur. He's curious and loves to explore new places, often climbing up high places in the house.</description>
+    <favoriteFood>Tuna</favoriteFood>
+    <likes>
+      <item>Climbing shelves</item>
+      <item>Playing with string</item>
+    </likes>
+  </cat>
+  
+  <cat>
+    <name>Chester</name>
+    <breed>Tabby</breed>
+    <color>Orange</color>
+    <age>2</age>
+    <description>Chester is an energetic tabby with a playful spirit. He loves running around the house and playing with toys.</description>
+    <favoriteFood>Chicken</favoriteFood>
+    <likes>
+      <item>Running around the yard</item>
+      <item>Chasing small toys</item>
+    </likes>
+  </cat>
+  
+  <cat>
+    <name>Luna</name>
+    <breed>Siamese</breed>
+    <color>Seal Point</color>
+    <age>4</age>
+    <description>Luna is a beautiful Siamese cat with striking blue eyes and a sleek coat. She's very vocal and loves to be the center of attention.</description>
+    <favoriteFood>Chicken liver</favoriteFood>
+    <likes>
+      <item>Talking to her owner</item>
+      <item>Playing fetch</item>
+    </likes>
+  </cat>
+</cats>

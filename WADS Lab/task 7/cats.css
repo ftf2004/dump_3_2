@@ -1,0 +1,104 @@
+/* General styles for the cats page */
+cats {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 40px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Box styles for each individual cat */
+  cat {
+    background-color: #ffffff;
+    margin: 40px 0;
+    padding: 25px;
+    border: 3px solid #e0e0e0;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+  }
+  
+  cat:hover {
+    background-color: #f0f8ff;
+  }
+  
+  /* Style for the left section (cat name, breed, color, age) */
+  .cat-info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  name {
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-bottom: 10px;
+  }
+  
+  breed {
+    font-size: 1.5em;
+    color: #2980b9;
+    margin-bottom: 8px;
+  }
+  
+  color {
+    font-size: 1.4em;
+    color: #27ae60;
+    margin-bottom: 8px;
+  }
+  
+  age {
+    font-size: 1.3em;
+    color: #f39c12;
+    margin-bottom: 8px;
+  }
+  
+  /* Style for the right section (cat description, favorite food, likes) */
+  .cat-description {
+    padding: 10px;
+    background-color: #fafafa;
+    border-radius: 10px;
+  }
+  
+  .description {
+    font-size: 1.2em;
+    color: #34495e;
+    margin-bottom: 20px;
+  }
+  
+  .favoriteFood {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #8e44ad;
+    margin-bottom: 10px;
+  }
+  
+  .likes {
+    margin-top: 20px;
+  }
+  
+  .likes item {
+    font-size: 1.2em;
+    color: #666;
+    padding-left: 20px;
+    margin-bottom: 5px;
+    display: list-item;
+  }
+  
+  .likes item:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Add space between cat entries */
+  cat + cat {
+    margin-top: 50px;
+  }
+  
