@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="styles.css"?>
+<library>
+  <book>
+    <title>Learning XML</title>
+    <author>John Doe</author>
+    <year>2020</year>
+  </book>
+  <book>
+    <title>Advanced XML</title>
+    <author>Jane Smith</author>
+    <year>2021</year>
+  </book>
+</library>
