@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Information</title>
+</head>
+<body>
+
+<h1>Cat Information</h1>
+<table id="catTable" border="1">
+    <tr>
+        <th>Name</th>
+        <th>Breed</th>
+        <th>Age</th>
+    </tr>
+</table>
+
+<script>
+const xmlData = `
+<cats>
+  <cat><name>Whiskers</name><breed>Persian</breed><age>3</age></cat>
+  <cat><name>Shadow</name><breed>Maine Coon</breed><age>5</age></cat>
+  <cat><name>Chester</name><breed>Tabby</breed><age>2</age></cat>
+</cats>`;
+
+const parser = new DOMParser();
+const xml = parser.parseFromString(xmlData, "application/xml");
+const cats = xml.getElementsByTagName("cat");
+
+const table = document.getElementById("catTable");
+
+for (let cat of cats) {
+    const name = cat.getElementsByTagName("name")[0].textContent;
+    const breed = cat.getElementsByTagName("breed")[0].textContent;
+    const age = cat.getElementsByTagName("age")[0].textContent;
+    const row = `<tr><td>${name}</td><td>${breed}</td><td>${age}</td></tr>`;
+    table.innerHTML += row;
+}
+</script>
+
+
+</body>
+</html>

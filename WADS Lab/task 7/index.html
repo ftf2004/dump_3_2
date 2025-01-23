@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Information</title>
+    <style>
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 8px; border: 1px solid #ddd; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+
+<h1>Cat Information</h1>
+<table id="catTable">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Breed</th>
+            <th>Color</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- JavaScript will populate the table -->
+    </tbody>
+</table>
+
+<script>
+// Function to load XML data and display it in the table
+function loadXMLData() {
+    const xmlString = `<?xml version="1.0" encoding="UTF-8"?>
+    <cats>
+        <cat>
+            <name>Whiskers</name>
+            <breed>Persian</breed>
+            <color>White</color>
+            <age>3</age>
+        </cat>
+        <cat>
+            <name>Shadow</name>
+            <breed>Maine Coon</breed>
+            <color>Grey</color>
+            <age>5</age>
+        </cat>
+        <cat>
+            <name>Chester</name>
+            <breed>Tabby</breed>
+            <color>Orange</color>
+            <age>2</age>
+        </cat>
+    </cats>`;
+
+    // Parse the XML string into an XML document
+    const parser = new DOMParser();
+    const xmlDoc = parser.parseFromString(xmlString, "application/xml");
+
+    // Get all cat nodes
+    const cats = xmlDoc.getElementsByTagName("cat");
+
+    // Loop through each cat and add rows to the table
+    const tableBody = document.getElementById("catTable").getElementsByTagName("tbody")[0];
+    for (let i = 0; i < cats.length; i++) {
+        const cat = cats[i];
+        const name = cat.getElementsByTagName("name")[0].textContent;
+        const breed = cat.getElementsByTagName("breed")[0].textContent;
+        const color = cat.getElementsByTagName("color")[0].textContent;
+        const age = cat.getElementsByTagName("age")[0].textContent;
+
+        // Create a new table row
+        const row = document.createElement("tr");
+        row.innerHTML = `<td>${name}</td><td>${breed}</td><td>${color}</td><td>${age}</td>`;
+        tableBody.appendChild(row);
+    }
+}
+
+// Load the data when the page is ready
+window.onload = loadXMLData;
+</script>
+
+</body>
+</html>
