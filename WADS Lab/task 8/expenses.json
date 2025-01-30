@@ -1,0 +1,6 @@
+[
+    { "item": "Groceries", "amount": 50.75 },
+    { "item": "Electricity Bill", "amount": 120.30 },
+    { "item": "Internet", "amount": 40.99 },
+    { "item": "Movie Tickets", "amount": 25.00 }
+]

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object to JSON Converter</title>
+</head>
+<body>
+    <h1>Object to JSON Conversion</h1>
+    <p id="json-result"></p>
+
+    <script>
+        let obj = { name: "Bob", age: 30 };
+        let json = JSON.stringify(obj);
+        
+        // Display the JSON result in the HTML
+        document.getElementById("json-result").innerText = json;
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+</head>
+<body>
+    <h1>Expenses List</h1>
+    <div id="expense-list"></div>
+    <h2>Total Expenses: $<span id="total-expenses">0.00</span></h2>
+
+    <script>
+        fetch('expenses.json')
+            .then(response => response.json())
+            .then(expenses => {
+                let expenseList = document.getElementById('expense-list');
+                let total = 0;
+                
+                expenses.forEach(expense => {
+                    let expenseItem = document.createElement('div');
+                    expenseItem.innerHTML = `${expense.item}: $${expense.amount.toFixed(2)}`;
+                    expenseList.appendChild(expenseItem);
+                    total += expense.amount;
+                });
+                
+                document.getElementById('total-expenses').innerText = total.toFixed(2);
+            })
+            .catch(error => console.error('Error fetching expenses data:', error));
+    </script>
+</body>
+</html>

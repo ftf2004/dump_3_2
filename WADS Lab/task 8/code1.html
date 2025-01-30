@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object to String Converter</title>
+</head>
+<body>
+    <h1>Object to String Conversion</h1>
+    <p id="result"></p>
+
+    <script>
+        let obj = { name: "Alice", age: 25 };
+        let str = JSON.stringify(obj);
+        
+        document.getElementById("result").innerText = str;
+    </script>
+</body>
+</html>
