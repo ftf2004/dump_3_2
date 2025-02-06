@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Regex Example</title>
+</head>
+<body>
+  <h1>Original String:</h1>
+  <p id="original">Hello, world! Welcome to the world of JavaScript.</p>
+
+  <button onclick="replaceText()">Search and Replace 'world' with 'universe'</button>
+
+  <h2>Search Result (Index of 'world'):</h2>
+  <p id="searchResult"></p>
+
+  <h2>Replaced String:</h2>
+  <p id="replaced"></p>
+
+  <script>
+    function replaceText() {
+      var str = document.getElementById("original").innerText;
+      var searchResult = str.search(/world/);
+      document.getElementById("searchResult").innerText = searchResult !== -1 ? `Found 'world' at index ${searchResult}` : "'world' not found";
+      var newStr = str.replace(/world/g, "universe");
+      document.getElementById("replaced").innerText = newStr;
+    }
+  </script>
+</body>
+</html>
